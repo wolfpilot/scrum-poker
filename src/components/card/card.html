@@ -1,0 +1,38 @@
+<li class="card js-card">
+
+    <p class="card__flipper js-card-flip" data-cardflip>
+        reverse
+    </p>
+    <!--<input type="checkbox" class="card__reverse" />-->
+
+    <input type="checkbox" class="disable-submit" />
+
+    <div class="card__outer">
+
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__nr">
+                        {{ item }}
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        {{ item }}
+                    </h1>
+                </div>
+            </div>
+
+            <div class="card__back">
+                <div class="card__content">
+                    <h3 class="card__subtitle">
+                        Poker card<span class="c c--accent-1">.</span>
+                    </h3>
+                    <p class="card__copy">
+                        This side up.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

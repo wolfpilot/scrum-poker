@@ -1,0 +1,11 @@
+{% set items = [0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100] %}
+
+{% set noOfCards = 11 %}
+
+<form>
+    <ul id="cards" class="cards" data-module="cards/Cards">
+        {% for item in items %}
+            {% include '../card/card.html' %}
+        {% endfor %}
+    </ul>
+</form>

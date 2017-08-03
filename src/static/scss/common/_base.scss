@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* stylelint-disable selector-pseudo-element-colon-notation */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+/* stylelint-enable */

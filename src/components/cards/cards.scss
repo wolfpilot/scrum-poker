@@ -1,0 +1,27 @@
+.disable-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.disable-submit + .card__outer {
+    transform: rotateY(0deg);
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}

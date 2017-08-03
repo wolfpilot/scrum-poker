@@ -1,0 +1,5 @@
+title: Cards
+description: Cards module, loops through and generates card components.
+demo: |
+  <div style="width:100%;height:200px;background:#f2f2f2">{}</div>
+implementation: Implementation instructions.

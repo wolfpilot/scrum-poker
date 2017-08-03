@@ -1,4 +1,26 @@
+@font-face {
+    font-family: 'Brando Sans';
+    src:
+        url('/static/fonts/BrandoSans-Light.woff2') format('woff2'),
+        url('/static/fonts/BrandoSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brando Sans';
+    src:
+        url('/static/fonts/BrandoSans-SemiBold.woff2') format('woff2'),
+        url('/static/fonts/BrandoSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Brando Sans', Arial, sans-serif;
     font-size: 18px;
+}
+
+.title {
+    text-align: center;
 }

@@ -1,0 +1,32 @@
+/** MEDIA QUERIES */
+
+$mq-mob: '640px';
+$mq-tab: '820px';
+$mq-desk: '1280px';
+
+/** COLOURS */
+
+$black: #000;
+$white: #fff;
+$l-grey: #f5f5f5;
+
+$l-beige: #efedea;
+$beige: #e5e1dd;
+$green: #01b373; // Emerald accent
+$accent-2: #25282a; // Dark grey
+
+$colours: (
+    black:          $black,
+    white:          $white,
+    green:          $green,
+    accent-2:       $accent-2
+);
+
+// @TODO: move colours to mixins
+.c {
+    @each $colour, $value in $colours {
+        &--#{$colour} {
+            color: $value;
+        }
+    }
+}
