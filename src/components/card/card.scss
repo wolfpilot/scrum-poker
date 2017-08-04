@@ -1,5 +1,3 @@
-// $noOfCards = 11;
-
 .card {
     position: absolute;
     list-style: none;
@@ -24,7 +22,6 @@
         width: 47.5%;
     }
 
-    // @for $i from 1 through $noOfCards {
     @for $i from 1 through 11 {
         &:nth-child(#{$i}) {
             top: 50px * $i;
@@ -70,8 +67,11 @@
         position: absolute;
         top: 15px;
         right: 15px;
-        z-index: 1000;
         font-size: 14px;
+
+        .card__back & {
+            color: $white;
+        }
     }
 
     &__outer {
@@ -82,7 +82,7 @@
         background-color: $white;
         border-radius: 10px;
         box-shadow: 0 0 5px transparentize($black, 0.75);
-        transition: transform 0.4s ease-in-out;
+        transition: transform $animTime ease-in-out;
         transform-style: preserve-3d;
 
         .card.is-flipped & {
@@ -104,6 +104,7 @@
         right: 0;
         bottom: 0;
         left: 0;
+        border-radius: 10px;
         backface-visibility: hidden;
     }
 

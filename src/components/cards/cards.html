@@ -2,10 +2,8 @@
 
 {% set noOfCards = 11 %}
 
-<form>
-    <ul id="cards" class="cards" data-module="cards/Cards">
-        {% for item in items %}
-            {% include '../card/card.html' %}
-        {% endfor %}
-    </ul>
-</form>
+<ul id="cards" class="cards" data-module="cards/Cards">
+    {% for item in items %}
+        {% include '../card/card.html' %}
+    {% endfor %}
+</ul>

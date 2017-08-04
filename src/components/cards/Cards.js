@@ -1,115 +1,51 @@
+// Utils
+import DOMHelpers from '../helpers/DOMHelpers';
+
+// Modules
+import Modal from '../modal/Modal';
+import CardModal from '../cardModal/CardModal';
+
 /**
  * @module Cards
  */
 class Cards {
 
     /**
-     * @param {String} noOfCards - Number of cards in the Fibonnaci sequence
+     * Class constructor
      */
-    constructor(noOfCards) {
-        // this.options = {};
-        this.noOfCards = noOfCards;
-        this.container = document.getElementById('cards');
-        this.fragment = document.createDocumentFragment();
+    constructor() {
+        this.cards = document.getElementById('cards');
 
-        // hard-coded for now
-        this.seq = [0, 0.5, 1, 2, 3, 5, 8, 'infinity'];
-
-        // this.generateFibSequence(11);
-        this.body = document.getElementsByTagName('body')[0];
-        this.cardIsActive = false;
-        this.cardIsFlipped = false;
-
-        this.bindEvents();
-
+        this.load();
     }
 
     /**
-     * Handle card active/disabled state
-     *
-     * @param {Object} e - Mouse click event
+     * @param {Object} e - Mouse click events
+     * @private
      */
-    handleCardActive(e) {
-        if (this.cardIsActive === false && this.cardIsFlipped === false) {
-            document.body.style.overflow = 'hidden';
-            e.target.parentNode.classList.add('is-active');
-            this.cardIsActive = true;
-        } else {
-            document.body.style.overflow = 'auto';
-            e.target.parentNode.classList.remove('is-active');
-            this.cardIsActive = false;
-        }
+    _handleEvents(e) {
+        let card = DOMHelpers.getClosestParent(e.target, '.card');
+        let data = card.getAttribute('data-card');
+
+        CardModal._updateContent(data);
+        Modal.handler();
     }
 
     /**
      * Bind event listeners
+     * @private
      */
-    bindEvents() {
-        this.container.addEventListener('click', e => {
-
-            if (e.target && e.target.nodeName === 'INPUT') {
-                this.handleCardActive(e);
-            }
-
-            if (e.target && e.target.classList.contains('js-card-flip') && this.cardIsFlipped === false) {
-                e.target.parentNode.classList.add('is-flipped');
-                this.cardIsFlipped = true;
-            } else {
-                e.target.parentNode.classList.remove('is-flipped');
-                this.cardIsFlipped = false;
-            }
-        });
+    _addEventListeners() {
+        this.cards.addEventListener('click', e => this._handleEvents(e));
     }
 
     /**
-     * Generate markup for each element
-     *
-     * @param {Integer} index - Value of the card
+     * Initialise
      */
-    generateElem(index) {
-
-        let card = document.createElement('li');
-        let cardInner = document.createElement('div');
-        let content = document.createElement('div');
-
-        card.className = 'card';
-        card.appendChild(cardInner);
-
-        cardInner.className = 'card__content';
-        content.className = 'card__value';
-        content.textContent = index;
-        cardInner.appendChild(content);
-
-        this.fragment.appendChild(card);
+    load() {
+        this._addEventListeners();
     }
 
-    /**
-     * Build HTML elements
-     *
-     * @param {Array} sequence - Array of cards to be created
-     */
-    buildElems(sequence) {
-
-        sequence.forEach(index => this.generateElem(index));
-
-        this.container.appendChild(this.fragment);
-
-    }
-
-    /**
-     * Generate new element array
-     *
-     * @param {String} noOfCards - Number of cards in the Fibonnaci sequence
-     */
-    // generateFibSequence(noOfCards) {
-    //
-    //     let sequence = this.seq;
-    //
-    //     this.buildElems(sequence);
-    //
-    //     return noOfCards;
-    //
-    // }
 }
 
 export default Cards;
