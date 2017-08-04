@@ -13,6 +13,7 @@ class Card {
         // Ideally, this should allow more than 1 selector
         this.cardFlipper = document.getElementsByClassName('card__flipper');
         this.card = document.getElementById('modal-card');
+
         this.isFlipped = false;
     }
 

@@ -41,7 +41,7 @@ class CardModal {
         // Try setting close as default within a return statement
         this.cardModal.addEventListener('click', e => {
 
-            let card = DOMHelpers.getClosestParent(e.target, '.card');
+            const card = DOMHelpers.getClosestParent(e.target, '.card');
 
             if (!e.target.hasAttribute('data-card-flip')) {
                 if (Card.isFlipped) {

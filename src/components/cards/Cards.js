@@ -12,9 +12,13 @@ class Cards {
 
     /**
      * Class constructor
+     *
+     * @param {HTMLElement} element - The HTMLElement this module is constructed upon
+     * @param {Object} options - ConditionerJS's merged options
      */
-    constructor() {
-        this.cards = document.getElementById('cards');
+    constructor(element, options) {
+        this._element = element;
+        this._options = options;
 
         this.load();
     }
@@ -24,8 +28,8 @@ class Cards {
      * @private
      */
     _handleEvents(e) {
-        let card = DOMHelpers.getClosestParent(e.target, '.card');
-        let data = card.getAttribute('data-card');
+        const card = DOMHelpers.getClosestParent(e.target, '.card');
+        const data = card.getAttribute('data-card');
 
         CardModal._updateContent(data);
         Modal.handler();
@@ -36,7 +40,8 @@ class Cards {
      * @private
      */
     _addEventListeners() {
-        this.cards.addEventListener('click', e => this._handleEvents(e));
+        // Delegate event listener
+        this._element.addEventListener('click', e => this._handleEvents(e));
     }
 
     /**
