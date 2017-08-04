@@ -1,6 +1,24 @@
 .cardModal {
-    top: 20px !important;
-    left: 20px;
+    top: 50%;
+    right: 0;
+    left: 0;
     width: calc(100% - 40px);
+    max-width: 280px;
     height: calc(100% - 40px);
+    max-height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: 400px) {
+        left: 0;
+        right: 0;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: $mq-mob) {
+        width: 50%;
+    }
 }

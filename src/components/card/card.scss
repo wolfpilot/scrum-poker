@@ -10,22 +10,13 @@
     perspective: 1000px;
     transition: z-index 0.4s ease-in-out;
 
-    @media screen and (min-width: $mq-desk) {
-        width: 23%;
-    }
+    .cards & {
 
-    @media screen and (min-width: $mq-tab) {
-        width: 30%;
-    }
-
-    @media screen and (min-width: $mq-mob) {
-        width: 47.5%;
-    }
-
-    @for $i from 1 through 11 {
-        &:nth-child(#{$i}) {
-            top: 50px * $i;
-            z-index: #{$i};
+        @for $i from 1 through 11 {
+            &:nth-child(#{$i}) {
+                top: 50px * $i;
+                z-index: #{$i};
+            }
         }
     }
 
@@ -37,31 +28,6 @@
         width: calc(100% - 40px);
         height: calc(100% - 40px);
     }
-
-    /*
-    &:not(:nth-child(4n)) {
-        margin-right: 2%;
-
-        @media screen and (min-width: $mq-tab) {
-            margin-right: auto;
-        }
-    }
-
-    &:not(:nth-child(3n)) {
-        @media screen and (max-width: $mq-tab) {
-            margin-right: 3.33%;
-        }
-        @media screen and (max-width: $mq-mob) {
-            margin-right: auto;
-        }
-    }
-
-    &:not(:nth-child(2n)) {
-        @media screen and (max-width: $mq-mob) {
-            margin-right: 5%;
-        }
-    }
-    */
 
     &__flipper {
         position: absolute;
