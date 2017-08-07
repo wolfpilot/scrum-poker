@@ -15,8 +15,7 @@ class CardModal {
      */
     constructor() {
         this.cardModal = document.getElementById('cardModal');
-        this.preview = document.getElementById('card-modal-preview');
-        this.title = document.getElementById('card-modal-title');
+        this.contentBlocks = document.querySelectorAll('[data-card-modal]');
 
         this.isFlipped = false;
 
@@ -29,8 +28,9 @@ class CardModal {
      * @private
      */
     _updateContent(data) {
-        this.preview.innerHTML = data;
-        this.title.innerHTML = data;
+        for (let i = 0; i < this.contentBlocks.length; i++) {
+            this.contentBlocks[i].innerHTML = data;
+        }
     }
 
     /**

@@ -10,7 +10,7 @@
         <div class="card__inner">
             <div class="card__front">
                 <div class="card__top">
-                    <h4 class="card__preview">
+                    <h4 class="card__preview card__preview--top">
                         {{ item | safe }}
                     </h4>
                 </div>
@@ -18,6 +18,11 @@
                     <h1 class="card__title">
                         {{ item | safe }}
                     </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        {{ item | safe }}
+                    </h4>
                 </div>
             </div>
         </div>

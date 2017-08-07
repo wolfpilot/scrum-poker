@@ -4,13 +4,16 @@
             <div class="card__inner">
                 <div class="card__front">
                     <div class="card__top">
-                        <h4 id="card-modal-preview" class="card__preview"></h4>
+                        <h4 class="card__preview card-preview--top" data-card-modal></h4>
                         <button class="card__flipper btn btn--flush" data-card-flip>
                             {% include '../svg-icon/reverse.svg' %}
                         </button>
                     </div>
+                    <div class="card__bottom">
+                        <h4 class="card__preview card__preview--bottom" data-card-modal></h4>
+                    </div>
                     <div class="card__content">
-                        <h1 id="card-modal-title" class="card__title"></h1>
+                        <h1 class="card__title" data-card-modal></h1>
                     </div>
                 </div>
 

@@ -101,6 +101,12 @@
     }
 
     &__preview {
+        display: inline-block;
+
+        &--bottom {
+            transform: rotate(180deg);
+        }
+
         svg {
             width: 20px;
             height: 20px;
@@ -135,5 +141,16 @@
 
     &__copy {
         font-size: 14px;
+    }
+
+    &__bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        text-align: right;
     }
 }
