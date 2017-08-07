@@ -26,6 +26,15 @@ module.exports = {
         }
     },
 
+    serviceWorker: {
+        src: {
+            serviceWorker: `${base.src}/serviceWorker.js`
+        },
+        dist: {
+            serviceWorker: `${base.dist}`
+        }
+    },
+
     css: {
         autoprefixer: {
             browsers: ['last 1 version', '> 5%']

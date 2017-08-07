@@ -12,9 +12,22 @@ const ready = () => {
 
 };
 
+// Set up service worker
+const serviceWorker = () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/serviceWorker.js', {
+            scope: '/'
+        }).then(reg => {
+            return reg;
+            // console.log('Yey!', reg);
+        }).catch(err => {
+            throw Error(err);
+            // console.log('Boo!', err);
+        });
+    }
+};
 
 // Manual init
-
 const main = () => {
 
     const elements = Array.from(document.querySelectorAll('[data-module]'));
@@ -41,8 +54,15 @@ const main = () => {
 
 };
 
-ready().then(main);
+// Initialising func
+const load = () => {
 
+    serviceWorker();
+    main();
+
+};
+
+ready().then(load);
 
 // // If you want to use conditioner instead:
 //

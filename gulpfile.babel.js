@@ -4,6 +4,7 @@ import runSequence from 'run-sequence';
 
 // Load tasks
 import './tasks/clean';
+import './tasks/serviceWorker';
 import './tasks/browsersync';
 import './tasks/html';
 import './tasks/img';
@@ -18,8 +19,9 @@ import './tasks/zip';
 gulp.task('dev', cb => {
     return runSequence(
         'clean',
+        'serviceWorker',
         ['docs', 'html', 'img', 'css', 'fonts'],
-        ['js', 'browsersync', 'docs-watch', 'html-watch', 'img-watch', 'css-watch', 'fonts-watch'],
+        ['service-worker-watch', 'js', 'browsersync', 'docs-watch', 'html-watch', 'img-watch', 'css-watch', 'fonts-watch'],
         cb
     );
 });
