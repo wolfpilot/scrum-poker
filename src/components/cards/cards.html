@@ -1,9 +1,12 @@
-{% set items = [0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100] %}
-
-{% set noOfCards = 11 %}
+{% set itemList = [0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100] %}
+{% set iconList = ['infinity', 'unknown', 'coffee'] %}
 
 <ul class="cards" data-module="cards/Cards">
-    {% for item in items %}
+    {% for item in itemList %}
+        {% include '../card/card.html' %}
+    {% endfor %}
+
+    {% for icon in iconList %}
         {% include '../card/card.html' %}
     {% endfor %}
 </ul>

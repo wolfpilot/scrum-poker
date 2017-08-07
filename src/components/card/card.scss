@@ -12,7 +12,7 @@
 
     .cards & {
 
-        @for $i from 1 through 11 {
+        @for $i from 1 through 14 {
             &:nth-child(#{$i}) {
                 top: 50px * $i;
                 z-index: #{$i};
@@ -33,10 +33,19 @@
         position: absolute;
         top: 15px;
         right: 15px;
+        width: 20px;
         font-size: 14px;
 
         .card__back & {
             color: $white;
+        }
+
+        svg {
+            pointer-events: none;
+
+            .card__back & {
+                fill: $white;
+            }
         }
     }
 
@@ -91,6 +100,14 @@
         text-align: left;
     }
 
+    &__preview {
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $black;
+        }
+    }
+
     &__content {
         position: absolute;
         top: 50%;
@@ -104,6 +121,12 @@
     &__title {
         color: $white;
         font-size: 80px;
+
+        svg {
+            width: 50%;
+            height: auto;
+            fill: $white;
+        }
     }
 
     &__subtitle {

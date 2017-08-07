@@ -1,15 +1,22 @@
+{% if icon %}
+    {% set itemType = 'icon' %}
+    {% set item %}
+        {% include '../svg-icon/' + icon + ".svg" %}
+    {% endset %}
+{% endif %}
+
 <li class="card" data-id="card" data-card="{{ item }}">
     <div class="card__outer">
         <div class="card__inner">
             <div class="card__front">
                 <div class="card__top">
-                    <h4 class="card__nr">
-                        {{ item }}
+                    <h4 class="card__preview">
+                        {{ item | safe }}
                     </h4>
                 </div>
                 <div class="card__content">
                     <h1 class="card__title">
-                        {{ item }}
+                        {{ item | safe }}
                     </h1>
                 </div>
             </div>
