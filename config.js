@@ -102,7 +102,7 @@ module.exports = {
         dist: {
             base: `${base.dist}/templates`
         },
-        baseUri: '/'
+        baseUri: '/ScrumPoker/'
     },
 
     img: {

@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import gulp from 'gulp';
 import runSequence from 'run-sequence';
+import config from './config';
 
 // Load tasks
 import './tasks/clean';
@@ -16,7 +17,14 @@ import './tasks/upload';
 import './tasks/githooks';
 import './tasks/zip';
 
+/**
+ * @TODO: Automate var change depending on the task (gulp dev/dist)
+ * Ex: gulp dev => pass config.baseUri as '/'
+ * Ex: gulp dist => pass config.baseUri as '/ScrumPoker/'
+ */
 gulp.task('dev', cb => {
+    config.html.baseUri = '/';
+
     return runSequence(
         'clean',
         'serviceWorker',

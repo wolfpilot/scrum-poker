@@ -34,6 +34,7 @@ class docsHelpers {
             description: marked(yml.description || ''),
             implementation: marked(yml.implementation || '').replace('<table', '<table class="table"'),
             demo: file.path.split(sep).pop().replace('.yml', '.demo.html'),
+            baseUri: config.html.baseUri,
             sample: sample
         };
 
@@ -48,6 +49,7 @@ class docsHelpers {
      * @returns {string} component - rendered component
      */
     static renderComponentDemo(content, file) {
+
         const yml = yaml.load(content);
         const locals = Object.assign(yml.data || '{}', { baseUri: config.html.baseUri });
         let demo = '';

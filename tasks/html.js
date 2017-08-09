@@ -14,7 +14,10 @@ gulp.task('html', () => {
                 config.src.templatesDir,
                 config.src.layoutDir,
                 config.src.componentsDir
-            ]
+            ],
+            data: {
+                baseUri: config.baseUri
+            }
         }))
         .pipe(gulp.dest(config.dist.base))
         .on('end', reload);
