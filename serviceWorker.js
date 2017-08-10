@@ -1,16 +1,30 @@
+/**
+ * @TODO: Lint and Babelify this file as well, make those paths pretty!
+ * Since the Service Worker's fired up before the DOM loads, we need a different way to determine the base path
+ * Also, maybe add another URLHelper for the location
+ * @returns {string} - The real base URL of the site
+ */
+const getPath = () => {
+    const url = new URL(location);
+    const basePath = (url.pathname.split('/')[1] || '');
+
+    return (basePath === 'ScrumPoker' ? '/' + basePath : '');
+};
+
+const basePath = getPath();
 const CACHE_NAME = 'my-app-0-1';
 const filesToCache = [
-    '/',
-    '/index.html',
-    '/static/css/all.css',
-    '/static/fonts/BrandoSans-Light.woff',
-    '/static/fonts/BrandoSans-Light.woff2',
-    '/static/fonts/BrandoSans-SemiBold.woff',
-    '/static/fonts/BrandoSans-SemiBold.woff2',
-    '/static/js/babel-helpers.js',
-    '/static/js/main.js',
-    '/static/js/polyfill.js',
-    '/templates/home.html'
+    basePath + '/',
+    basePath + '/index.html',
+    basePath + '/static/css/all.css',
+    basePath + '/static/fonts/BrandoSans-Light.woff',
+    basePath + '/static/fonts/BrandoSans-Light.woff2',
+    basePath + '/static/fonts/BrandoSans-SemiBold.woff',
+    basePath + '/static/fonts/BrandoSans-SemiBold.woff2',
+    basePath + '/static/js/babel-helpers.js',
+    basePath + '/static/js/main.js',
+    basePath + '/static/js/polyfill.js',
+    basePath + '/templates/home.html'
 ];
 
 /**
@@ -18,6 +32,8 @@ const filesToCache = [
  */
 self.addEventListener('install', event => {
     console.log('[ServiceWorker] Install');
+
+
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             console.log('[ServiceWorker] Caching app shell');
