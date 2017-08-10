@@ -1,3 +1,5 @@
+// Helpers
+import URLHelpers from './utils/URLHelpers';
 
 // Reference our components so they get included
 import components from '../../components';
@@ -14,9 +16,12 @@ const ready = () => {
 
 // Set up service worker
 const serviceWorker = () => {
+
+    const basePath = URLHelpers.getPath();
+
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/serviceWorker.js', {
-            scope: '/'
+        navigator.serviceWorker.register(`${basePath}/serviceWorker.js`, {
+            scope: `${basePath}/`
         }).then(reg => {
             return reg;
             // console.log('Yey!', reg);
