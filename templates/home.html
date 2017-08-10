@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Front-End Library</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/ScrumPoker/static/css/all.css"><!--[if lt IE 9]><script>'article main footer'.replace(/\w+/g,function(n){document.createElement(n)})</script><![endif]-->
+
+    <script>
+        (function(d){
+
+            if (!('querySelector' in d && 'addEventListener' in window)) return;
+
+            d.documentElement.className += ' has-js';
+
+            function loadInOrder(src) {
+                var s = d.createElement('script');
+                var deps = [].slice.call(arguments).slice(1);
+                s.src = src;
+                s.onload = function() { deps.length && loadInOrder.apply(null, deps); };
+                s.onerror = console.error;
+                d.head.appendChild(s);
+            }
+
+            var supported =
+                'Symbol' in window &&
+                'Promise' in window &&
+                'assign' in Object &&
+                'from' in Array &&
+                'dataset' in document.createElement('div') &&
+                Symbol.iterator in NodeList.prototype;
+
+            if (supported) {
+                loadInOrder('/ScrumPoker/static/js/babel-helpers.js', '/ScrumPoker/static/js/main.js');
+            } else {
+                loadInOrder('/ScrumPoker/static/js/babel-helpers.js', '/ScrumPoker/static/js/polyfill.js', '/ScrumPoker/static/js/main.js');
+            }
+
+        }(document));
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="container">
+                <h2 class="title">
+                    Please pick the correct story points for your card.
+                </h2>
+                
+
+
+<ul class="cards" data-module="cards/Cards">
+    
+        
+
+<li class="card" data-id="card" data-card="0">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        0
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        0
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        0
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="0.5">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        0.5
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        0.5
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        0.5
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="1">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        1
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        1
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        1
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="2">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        2
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        2
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        2
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="3">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        3
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        3
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        3
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="5">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        5
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        5
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        5
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="8">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        8
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        8
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        8
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="13">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        13
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        13
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        13
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="20">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        20
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        20
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        20
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="40">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        40
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        40
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        40
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+
+<li class="card" data-id="card" data-card="100">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        100
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        100
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        100
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+
+    
+        
+    
+    
+
+
+<li class="card" data-id="card" data-card="
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;64&quot; height=&quot;64&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+    &lt;path d=&quot;M79.514 28C69.118 28 57.724 33.792 50 42.577 42.275 33.792 30.88 28 20.486 28 10.582 28 0 33.78 0 50s10.582 22 20.486 22C30.883 72 42.276 66.21 50 57.426 57.723 66.21 69.117 72 79.512 72 89.418 72 100 66.22 100 50S89.418 28 79.514 28zM20.486 63.2C12.926 63.2 9.09 58.76 9.09 50c0-8.757 3.836-13.2 11.396-13.2 8.36 0 18.07 5.427 24.03 13.2-5.96 7.773-15.666 13.2-24.03 13.2zm59.026 0c-8.36 0-18.07-5.427-24.03-13.2 5.96-7.773 15.67-13.2 24.032-13.2 7.562 0 11.396 4.442 11.396 13.2-.002 8.76-3.836 13.2-11.398 13.2z&quot; /&gt;
+&lt;/svg&gt;
+
+    ">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 100 100">
+    <path d="M79.514 28C69.118 28 57.724 33.792 50 42.577 42.275 33.792 30.88 28 20.486 28 10.582 28 0 33.78 0 50s10.582 22 20.486 22C30.883 72 42.276 66.21 50 57.426 57.723 66.21 69.117 72 79.512 72 89.418 72 100 66.22 100 50S89.418 28 79.514 28zM20.486 63.2C12.926 63.2 9.09 58.76 9.09 50c0-8.757 3.836-13.2 11.396-13.2 8.36 0 18.07 5.427 24.03 13.2-5.96 7.773-15.666 13.2-24.03 13.2zm59.026 0c-8.36 0-18.07-5.427-24.03-13.2 5.96-7.773 15.67-13.2 24.032-13.2 7.562 0 11.396 4.442 11.396 13.2-.002 8.76-3.836 13.2-11.398 13.2z" />
+</svg>
+
+    
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 100 100">
+    <path d="M79.514 28C69.118 28 57.724 33.792 50 42.577 42.275 33.792 30.88 28 20.486 28 10.582 28 0 33.78 0 50s10.582 22 20.486 22C30.883 72 42.276 66.21 50 57.426 57.723 66.21 69.117 72 79.512 72 89.418 72 100 66.22 100 50S89.418 28 79.514 28zM20.486 63.2C12.926 63.2 9.09 58.76 9.09 50c0-8.757 3.836-13.2 11.396-13.2 8.36 0 18.07 5.427 24.03 13.2-5.96 7.773-15.666 13.2-24.03 13.2zm59.026 0c-8.36 0-18.07-5.427-24.03-13.2 5.96-7.773 15.67-13.2 24.032-13.2 7.562 0 11.396 4.442 11.396 13.2-.002 8.76-3.836 13.2-11.398 13.2z" />
+</svg>
+
+    
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 100 100">
+    <path d="M79.514 28C69.118 28 57.724 33.792 50 42.577 42.275 33.792 30.88 28 20.486 28 10.582 28 0 33.78 0 50s10.582 22 20.486 22C30.883 72 42.276 66.21 50 57.426 57.723 66.21 69.117 72 79.512 72 89.418 72 100 66.22 100 50S89.418 28 79.514 28zM20.486 63.2C12.926 63.2 9.09 58.76 9.09 50c0-8.757 3.836-13.2 11.396-13.2 8.36 0 18.07 5.427 24.03 13.2-5.96 7.773-15.666 13.2-24.03 13.2zm59.026 0c-8.36 0-18.07-5.427-24.03-13.2 5.96-7.773 15.67-13.2 24.032-13.2 7.562 0 11.396 4.442 11.396 13.2-.002 8.76-3.836 13.2-11.398 13.2z" />
+</svg>
+
+    
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+    
+    
+
+
+<li class="card" data-id="card" data-card="
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;64&quot; height=&quot;64&quot; viewBox=&quot;0 0 27.774 27.774&quot;&gt;
+    &lt;path d=&quot;M10.398 22.81h4.618v4.965h-4.618V22.81zm10.66-21.216C19.854.532 17.612 0 14.33 0c-3.71 0-6.205.514-7.482 1.543-1.277 1.027-1.916 3.027-1.916 6l-.02 1.008h4.576l-.02-1.048c0-1.424.303-2.377.907-2.854.604-.477 1.814-.717 3.632-.717 1.936 0 3.184.23 3.74.677.56.45.837 1.457.837 3.017 0 1.883-.745 3.133-2.237 3.752l-1.797.766c-1.882.78-3.044 1.538-3.49 2.27-.44.732-.664 2.242-.664 4.53h4.68v-.647c0-1.41.987-2.533 2.965-3.365 2.03-.86 3.344-1.746 3.936-2.65.592-.91.888-2.5.888-4.772 0-2.883-.603-4.853-1.806-5.914z&quot; /&gt;
+&lt;/svg&gt;
+
+    ">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 27.774 27.774">
+    <path d="M10.398 22.81h4.618v4.965h-4.618V22.81zm10.66-21.216C19.854.532 17.612 0 14.33 0c-3.71 0-6.205.514-7.482 1.543-1.277 1.027-1.916 3.027-1.916 6l-.02 1.008h4.576l-.02-1.048c0-1.424.303-2.377.907-2.854.604-.477 1.814-.717 3.632-.717 1.936 0 3.184.23 3.74.677.56.45.837 1.457.837 3.017 0 1.883-.745 3.133-2.237 3.752l-1.797.766c-1.882.78-3.044 1.538-3.49 2.27-.44.732-.664 2.242-.664 4.53h4.68v-.647c0-1.41.987-2.533 2.965-3.365 2.03-.86 3.344-1.746 3.936-2.65.592-.91.888-2.5.888-4.772 0-2.883-.603-4.853-1.806-5.914z" />
+</svg>
+
+    
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 27.774 27.774">
+    <path d="M10.398 22.81h4.618v4.965h-4.618V22.81zm10.66-21.216C19.854.532 17.612 0 14.33 0c-3.71 0-6.205.514-7.482 1.543-1.277 1.027-1.916 3.027-1.916 6l-.02 1.008h4.576l-.02-1.048c0-1.424.303-2.377.907-2.854.604-.477 1.814-.717 3.632-.717 1.936 0 3.184.23 3.74.677.56.45.837 1.457.837 3.017 0 1.883-.745 3.133-2.237 3.752l-1.797.766c-1.882.78-3.044 1.538-3.49 2.27-.44.732-.664 2.242-.664 4.53h4.68v-.647c0-1.41.987-2.533 2.965-3.365 2.03-.86 3.344-1.746 3.936-2.65.592-.91.888-2.5.888-4.772 0-2.883-.603-4.853-1.806-5.914z" />
+</svg>
+
+    
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 27.774 27.774">
+    <path d="M10.398 22.81h4.618v4.965h-4.618V22.81zm10.66-21.216C19.854.532 17.612 0 14.33 0c-3.71 0-6.205.514-7.482 1.543-1.277 1.027-1.916 3.027-1.916 6l-.02 1.008h4.576l-.02-1.048c0-1.424.303-2.377.907-2.854.604-.477 1.814-.717 3.632-.717 1.936 0 3.184.23 3.74.677.56.45.837 1.457.837 3.017 0 1.883-.745 3.133-2.237 3.752l-1.797.766c-1.882.78-3.044 1.538-3.49 2.27-.44.732-.664 2.242-.664 4.53h4.68v-.647c0-1.41.987-2.533 2.965-3.365 2.03-.86 3.344-1.746 3.936-2.65.592-.91.888-2.5.888-4.772 0-2.883-.603-4.853-1.806-5.914z" />
+</svg>
+
+    
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+    
+    
+
+
+<li class="card" data-id="card" data-card="
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;64&quot; height=&quot;64&quot; viewBox=&quot;0 0 21.664 21.665&quot;&gt;
+    &lt;g&gt;
+        &lt;path d=&quot;M2.756 20.725h2.95c.04.257.254.458.523.458h6.706c.27 0 .482-.2.523-.458h2.95c.498 0 .902-.404.902-.903H1.854c0 .5.404.903.902.903z&quot;/&gt;
+        &lt;path d=&quot;M20.865 11.444c-.752-.61-1.81-.62-2.508-.542.02-.486.03-.983.03-1.5H0c0 4.97.752 8.556 5.51 9.894h7.367c1.885-.53 3.135-1.418 3.964-2.6 1.807-.035 4.712-.746 4.82-3.24.048-1.092-.406-1.698-.795-2.012zm-3.267 3.826c.346-.89.55-1.89.664-2.988.488-.08 1.33-.13 1.754.215.078.064.32.262.293.9-.058 1.293-1.662 1.727-2.712 1.873z&quot;/&gt;
+        &lt;path d=&quot;M7.49 8.704s3.5-.257 1.897-3.208C8.1 3.126 8.393 1.736 10.04.48c0 0-5.397 1.376-2.25 5.63 1.156 1.855-.3 2.594-.3 2.594z&quot;/&gt;
+        &lt;path d=&quot;M9.85 8.468s2.804-.59 1.278-2.846c-.554-.978.21-1.327.21-1.327s-1.805.057-1.043 1.608c.61 1.247.43 1.955-.445 2.565z&quot;/&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+
+    ">
+    <div class="card__outer">
+        <div class="card__inner">
+            <div class="card__front">
+                <div class="card__top">
+                    <h4 class="card__preview card__preview--top">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 21.664 21.665">
+    <g>
+        <path d="M2.756 20.725h2.95c.04.257.254.458.523.458h6.706c.27 0 .482-.2.523-.458h2.95c.498 0 .902-.404.902-.903H1.854c0 .5.404.903.902.903z"/>
+        <path d="M20.865 11.444c-.752-.61-1.81-.62-2.508-.542.02-.486.03-.983.03-1.5H0c0 4.97.752 8.556 5.51 9.894h7.367c1.885-.53 3.135-1.418 3.964-2.6 1.807-.035 4.712-.746 4.82-3.24.048-1.092-.406-1.698-.795-2.012zm-3.267 3.826c.346-.89.55-1.89.664-2.988.488-.08 1.33-.13 1.754.215.078.064.32.262.293.9-.058 1.293-1.662 1.727-2.712 1.873z"/>
+        <path d="M7.49 8.704s3.5-.257 1.897-3.208C8.1 3.126 8.393 1.736 10.04.48c0 0-5.397 1.376-2.25 5.63 1.156 1.855-.3 2.594-.3 2.594z"/>
+        <path d="M9.85 8.468s2.804-.59 1.278-2.846c-.554-.978.21-1.327.21-1.327s-1.805.057-1.043 1.608c.61 1.247.43 1.955-.445 2.565z"/>
+    </g>
+</svg>
+
+    
+                    </h4>
+                </div>
+                <div class="card__content">
+                    <h1 class="card__title">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 21.664 21.665">
+    <g>
+        <path d="M2.756 20.725h2.95c.04.257.254.458.523.458h6.706c.27 0 .482-.2.523-.458h2.95c.498 0 .902-.404.902-.903H1.854c0 .5.404.903.902.903z"/>
+        <path d="M20.865 11.444c-.752-.61-1.81-.62-2.508-.542.02-.486.03-.983.03-1.5H0c0 4.97.752 8.556 5.51 9.894h7.367c1.885-.53 3.135-1.418 3.964-2.6 1.807-.035 4.712-.746 4.82-3.24.048-1.092-.406-1.698-.795-2.012zm-3.267 3.826c.346-.89.55-1.89.664-2.988.488-.08 1.33-.13 1.754.215.078.064.32.262.293.9-.058 1.293-1.662 1.727-2.712 1.873z"/>
+        <path d="M7.49 8.704s3.5-.257 1.897-3.208C8.1 3.126 8.393 1.736 10.04.48c0 0-5.397 1.376-2.25 5.63 1.156 1.855-.3 2.594-.3 2.594z"/>
+        <path d="M9.85 8.468s2.804-.59 1.278-2.846c-.554-.978.21-1.327.21-1.327s-1.805.057-1.043 1.608c.61 1.247.43 1.955-.445 2.565z"/>
+    </g>
+</svg>
+
+    
+                    </h1>
+                </div>
+                <div class="card__bottom">
+                    <h4 class="card__preview card__preview--bottom">
+                        
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 21.664 21.665">
+    <g>
+        <path d="M2.756 20.725h2.95c.04.257.254.458.523.458h6.706c.27 0 .482-.2.523-.458h2.95c.498 0 .902-.404.902-.903H1.854c0 .5.404.903.902.903z"/>
+        <path d="M20.865 11.444c-.752-.61-1.81-.62-2.508-.542.02-.486.03-.983.03-1.5H0c0 4.97.752 8.556 5.51 9.894h7.367c1.885-.53 3.135-1.418 3.964-2.6 1.807-.035 4.712-.746 4.82-3.24.048-1.092-.406-1.698-.795-2.012zm-3.267 3.826c.346-.89.55-1.89.664-2.988.488-.08 1.33-.13 1.754.215.078.064.32.262.293.9-.058 1.293-1.662 1.727-2.712 1.873z"/>
+        <path d="M7.49 8.704s3.5-.257 1.897-3.208C8.1 3.126 8.393 1.736 10.04.48c0 0-5.397 1.376-2.25 5.63 1.156 1.855-.3 2.594-.3 2.594z"/>
+        <path d="M9.85 8.468s2.804-.59 1.278-2.846c-.554-.978.21-1.327.21-1.327s-1.805.057-1.043 1.608c.61 1.247.43 1.955-.445 2.565z"/>
+    </g>
+</svg>
+
+    
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+    
+</ul>
+
+                <div id="modal" class="modal">
+    <div id="cardModal" class="cardModal card">
+        <div class="card__outer">
+            <div class="card__inner">
+                <div class="card__front">
+                    <div class="card__top">
+                        <h4 class="card__preview card-preview--top" data-card-modal></h4>
+                        <button class="card__flipper btn btn--flush" data-card-flip>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.073 94.072">
+    <path d="M91.465 5.49c-.748-.31-1.61-.138-2.18.435L80.97 14.24C72.045 5.058 60.124 0 47.4 0c-2.693 0-5.408.235-8.07.697C21.22 3.845 6.543 17.405 1.945 35.244c-.155.6-.023 1.235.355 1.724.378.49.96.775 1.58.775h12.738c.84 0 1.59-.524 1.878-1.313 3.73-10.193 12.992-17.97 23.598-19.814 1.747-.303 3.525-.456 5.288-.456 8.428 0 16.3 3.374 22.168 9.5l-8.445 8.444c-.57.572-.742 1.432-.434 2.18.312.747 1.04 1.234 1.85 1.234H90.7c1.104 0 2-.896 2-2V7.338c0-.808-.49-1.537-1.235-1.847z"/>
+    <path d="M90.192 56.328H77.455c-.84 0-1.59.523-1.878 1.312-3.73 10.193-12.992 17.972-23.598 19.814-1.75.303-3.526.456-5.29.456-8.427 0-16.3-3.374-22.167-9.5l8.444-8.444c.572-.572.743-1.432.434-2.18-.31-.747-1.038-1.234-1.847-1.234H3.373c-1.103 0-2 .896-2 2v28.18c0 .81.488 1.54 1.236 1.85.745.31 1.606.137 2.178-.436l8.316-8.315c8.922 9.184 20.843 14.242 33.57 14.242 2.692 0 5.407-.235 8.068-.697 18.112-3.146 32.79-16.708 37.387-34.547.154-.6.022-1.234-.355-1.725-.38-.488-.964-.775-1.583-.775z"/>
+</svg>
+
+                        </button>
+                    </div>
+                    <div class="card__bottom">
+                        <h4 class="card__preview card__preview--bottom" data-card-modal></h4>
+                    </div>
+                    <div class="card__content">
+                        <h1 class="card__title" data-card-modal></h1>
+                    </div>
+                </div>
+
+                <div class="card__back">
+                    <div class="card__top">
+                        <button class="card__flipper btn btn--flush" data-card-flip>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.073 94.072">
+    <path d="M91.465 5.49c-.748-.31-1.61-.138-2.18.435L80.97 14.24C72.045 5.058 60.124 0 47.4 0c-2.693 0-5.408.235-8.07.697C21.22 3.845 6.543 17.405 1.945 35.244c-.155.6-.023 1.235.355 1.724.378.49.96.775 1.58.775h12.738c.84 0 1.59-.524 1.878-1.313 3.73-10.193 12.992-17.97 23.598-19.814 1.747-.303 3.525-.456 5.288-.456 8.428 0 16.3 3.374 22.168 9.5l-8.445 8.444c-.57.572-.742 1.432-.434 2.18.312.747 1.04 1.234 1.85 1.234H90.7c1.104 0 2-.896 2-2V7.338c0-.808-.49-1.537-1.235-1.847z"/>
+    <path d="M90.192 56.328H77.455c-.84 0-1.59.523-1.878 1.312-3.73 10.193-12.992 17.972-23.598 19.814-1.75.303-3.526.456-5.29.456-8.427 0-16.3-3.374-22.167-9.5l8.444-8.444c.572-.572.743-1.432.434-2.18-.31-.747-1.038-1.234-1.847-1.234H3.373c-1.103 0-2 .896-2 2v28.18c0 .81.488 1.54 1.236 1.85.745.31 1.606.137 2.178-.436l8.316-8.315c8.922 9.184 20.843 14.242 33.57 14.242 2.692 0 5.407-.235 8.068-.697 18.112-3.146 32.79-16.708 37.387-34.547.154-.6.022-1.234-.355-1.725-.38-.488-.964-.775-1.583-.775z"/>
+</svg>
+
+                        </button>
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__subtitle">
+                            Poker card<span class="c c--accent-1">.</span>
+                        </h3>
+                        <p class="card__copy">
+                            This side up.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
