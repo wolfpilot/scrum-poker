@@ -36,6 +36,7 @@ gulp.task('dev', cb => {
 
 gulp.task('dist', cb => runSequence(
     'clean',
+    'serviceWorker',
     ['docs', 'html', 'img', 'css', 'fonts', 'js'],
     'zip',
     cb
