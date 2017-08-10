@@ -1,5 +1,5 @@
 // Utils
-import DOMHelpers from '../helpers/DOMHelpers';
+import DOMHelpers from '../../static/js/utils/DOMHelpers';
 
 /**
  * @module Card
